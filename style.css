@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	zoom: 1;
+}
+.clear {
+	clear: both;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 1440px;
+}
+.logo-column {
+	width: 4.86%;
+	float: left;
+	position: relative;
+}
+.logo-column:after {
+    box-shadow: 4px 0 4px 0px rgba(240,240,240,0.9) inset;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    right: -4px;
+    top: 0;
+    width: 4px;
+}    
+.content {
+	float: left;
+	width: 95.14%;
+}
+.logo {
+	padding-left: 20px;
+	padding-top: 25px;
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat; 
+}
+.question {
+	padding-left: 23px;
+	padding-top: 720px;
+	padding-bottom: 20px;
+	width: 29px;
+	height: 29px;
+	background-repeat: no-repeat;
+}
+.salary:after {
+	content: "";
+	margin-left: 10px;
+	margin-top: -5px;
+	background: url(img/ruble.png) no-repeat;
+	display: inline-block;
+	width: 9px;
+	height: 14px;
+	vertical-align: middle;
+}
+.carshering a {
+	display: inline-block;
+	line-height: 82px;
+}
+.carshering a img {
+	padding-left: 50px;
+	margin-right: 6px;
+	line-height: 82px;
+	vertical-align: middle;
+	width: 19px;
+	height: 19px;
+	background-repeat: no-repeat; 
+}
+.working-personal-info li {
+	display: inline-block;
+	vertical-align: middle;
+	height: 82px;
+}
+.salary, .business-trip, .carshering {
+	vertical-align: middle;
+	font: normal 19px Arial;
+	letter-spacing: 0.46px;
+	color: #000;
+	line-height: 82px;
+}
+.salary {
+	padding-left: 12px;
+}
+.working-personal-info {
+	height: 82px;
+	background-color: #f2f6f7;
+	border-bottom: 1px solid #f0f4f5;
+}
+.business-trip {
+	margin-left: 40px;
+}
+.search-department, .search-collaborator, .empty {
+	display: inline-block;
+}
+.search-department, .search-collaborator {
+	width: 293px;
+	vertical-align: middle;
+	border-bottom: 1px solid #f2f2f2;
+	border-right: 1px solid #f2f2f2;
+	font: normal 16px Arial;
+	color: #cccccc;
+	line-height: 67px;
+}
+.empty {
+	width: 711px;
+	line-height: 67px;
+	border-bottom: 1px solid #f2f2f2;
+} 
+.search-department {
+	padding-left: 13px;
+}
+.search-department img {
+	padding-left: 160px;
+}
+.search-collaborator {
+	padding-left: 50px;
+}
+.search-collaborator img {
+	padding-left: 115px;
+}
+.add li {
+	display: inline-block;
+}
+.add li a {
+	font: normal 16px Arial;
+	letter-spacing: 1.1px;
+	color: #26b4cf;
+	text-transform: uppercase;
+}
