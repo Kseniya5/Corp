@@ -29,7 +29,7 @@ body {
 }
 .wrapper {
 	margin: 0 auto;
-	width: 100%;
+	height: 100%;
 }
 .wrapper-logo-column {
 	width: 70px;
@@ -39,6 +39,7 @@ body {
 }
 .logo-column {
 	position: relative;
+	height: 100%;
 }
 .wrapper-logo-column:after {
     box-shadow: 4px 0px 4px 0px rgba(240,240,240,0.9);
@@ -60,7 +61,7 @@ body {
 .question {
 	position: absolute;
 	left: 23px;
-	top: 810px;
+	bottom: 50px;
 	width: 29px;
 	height: 29px;
 	background-image: url(img/question.png);
@@ -68,6 +69,10 @@ body {
 }
 .content {
 	margin-left: 70px;
+	height: 100%;
+}
+.main-content {
+	height: 100%;
 }
 .salary:after {
 	content: "";
@@ -160,6 +165,10 @@ body {
 .department {
 	width: 25%;
 }
+.department ul, .designers, .trips {
+	height: 100%;
+	overflow: auto;
+}
 .wrapper-department-item {
 	margin-left: 10px;
 	border-bottom: solid 1px #f0f4f5;
@@ -222,6 +231,7 @@ body {
 } 
 .department, .wrapper-collaborators, .trips-corrects {
 	float: left;
+	height: 100%;
 }
 .wrapper-collaborators {
 	width: 27%;
