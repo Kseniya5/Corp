@@ -37,6 +37,11 @@ body {
 	float: left;
 	position: relative;
 }
+@media (max-width: 1024px) {
+	.wrapper-logo-column {
+		width: 50px;
+	}
+}	
 .logo-column {
 	position: relative;
 	height: 100%;
@@ -67,10 +72,20 @@ body {
 	background-image: url(img/question.png);
 	background-repeat: no-repeat;
 }
+@media (max-width: 1024px) {		
+	.question {
+		left: 10px;
+	}
+}	
 .content {
 	margin-left: 70px;
 	height: 100%;
 }
+@media (max-width: 1024px) {		
+	.content {
+		margin-left: 50px;
+	}
+}	
 .main-content {
 	height: 100%;
 }
@@ -97,6 +112,11 @@ body {
 	height: 19px;
 	background-repeat: no-repeat; 
 }
+@media (max-width: 1024px) {		
+	.carshering a img {
+		padding-left: 0;
+	}
+}	
 .working-personal-info p {
 	display: inline-block;
 	vertical-align: middle;
@@ -117,21 +137,31 @@ body {
 	background-color: #f2f6f7;
 	border-bottom: 1px solid #f0f4f5;
 }
+@media (max-width: 1024px) {		
+	.working-personal-info span {
+		font-size: 16px;
+		margin-left: 20px;
+	}
+	.working-personal-info span:first-child {
+		margin-left: 10px;
+	}
+}	
 .business-trip {
 	margin-left: 40px;
 }
 .search {
-	line-height: 67px;
-}
-.search {
+	padding-left: 13px;
 	vertical-align: middle;
 	font: normal 16px Arial;
 	color: #cccccc;
 	line-height: 60px;
 }
-.search {
-	padding-left: 13px;
-}
+@media (max-width: 1024px) {		
+	.search {
+		padding-left: 10px;
+		font-size: 15px;
+	}
+}	
 .search img {
 	max-width: 100%;
 }
@@ -140,34 +170,65 @@ body {
 	padding-right: 26px;
 	float: right;
 }
+@media (max-width: 1024px) {		
+	.search .question-white {
+		padding-right: 10px;
+	}
+}	
 .correct a {
 	font: normal 16px Arial;
 	letter-spacing: 1.4px;
 	color: #26b4cf;
 	text-transform: uppercase;
 }
+@media (max-width: 1024px) {		
+	.correct a {
+		font-size: 14px;
+	}
+}	
 .correct {
+	padding-left: 12px;
+	padding-right: 12px;
 	vertical-align: middle;
 	line-height: 57px;
 	border-top: 1px solid #f2f2f2;
 	border-bottom: 1px solid #f2f2f2;
 }
-.correct {
-	padding-left: 12px;
-	padding-right: 12px;
-}
+@media (max-width: 1024px) {		
+	.correct {
+		padding-top: 12px;
+		line-height: 15px;
+		height: 45px;		
+	}
+}	
 .trips-corrects {
 	padding-top: 65px;
 }
 .correct a:last-child {
 	padding-left: 12px;
 }
+@media (max-width: 1024px) {		
+	.correct a:last-child {
+		padding-left: 0;		
+	}
+}
 .department {
 	width: 25%;
 }
-.department ul, .designers, .trips {
+.department, .wrapper-collaborators, .trips-corrects {
+	position: relative;
+	height: 100%;
+}	
+.wrapper-department {
+	padding-top: 124px;
+	box-sizing: border-box;
+}
+.wrapper-department ul {
 	height: 100%;
 	overflow: auto;
+}
+.header-department {
+	position: absolute;
 }
 .wrapper-department-item {
 	margin-left: 10px;
@@ -179,7 +240,20 @@ body {
 	padding-right: 15px;
 	padding-bottom: 30px;
 	margin-right: 10px;
-} 
+}
+@media (max-width: 1024px) {		
+	.department-item {
+		padding-bottom: 13px;
+	}		
+	.department-item, .designer {
+		padding-left: 12px;
+		padding-right: 12px;
+	}		
+	.department-item span, .designer span {
+		font-size: 14px;
+		line-height: 21px;
+	}
+}
 .wrapper-designer {
 	margin-left: 13px;
 	border-bottom: 1px solid #f2f2f2;
@@ -195,14 +269,19 @@ body {
 .active {
 	border-bottom: none;
 }
-.active .name-department, .active .name {
+.active .name-item {
 	color: #505050;
 }
-.name-department, .name {
+.name-item {
 	font: normal 19px Arial;
 	color: #191919;	
 }
-.name-department {
+@media (max-width: 1024px) {		
+	.name-item {
+	font-size: 16px;
+	}
+}	
+.department-item .name-item {
 	letter-spacing: 0.5px;	
 }
 .quantity, .working-working-days, .working-week-end, .position, .phone {
@@ -240,23 +319,40 @@ body {
 	border-left: 1px solid #f2f2f2;
 	border-right: 1px solid #f2f2f2; 
 }
-.designer {
-	margin-right: 12px;
-}
 .wrapper-designer:first-child {
 	margin-top: 33px;
 }
 .designer {
+	margin-right: 12px;
 	padding-top: 25px;
 	padding-left: 40px;
 	padding-right: 40px;
 	padding-bottom: 40px;
 }
-.name {
+@media (max-width: 1024px) {		
+	.designer {
+		padding-bottom: 25px;
+	}
+}	
+.designer .name-item {
 	letter-spacing: 0.3px;
 }
 .position {
 	line-height: 28px;
+}
+@media (max-width: 1024px) {		
+	.position {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		line-height: 20px;
+	}
+}
+@media (max-width: 1024px) {		
+	.position {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		line-height: 20px;
+	}
 }
 .phone {
 	letter-spacing: 0.4px;
@@ -269,6 +365,11 @@ body {
 	margin-left: 62px;
 	display: block;
 }
+@media (max-width: 1024px) {		
+	.trips {
+		margin-left: 15px;
+	}
+}
 .trip-first, .trip {
 	padding-bottom: 18px;
 	border-bottom: 1px solid #f2f2f2;
@@ -279,11 +380,22 @@ body {
 	letter-spacing: -0.7px;
 	color: #191919;
 }
+@media (max-width: 1024px) {		
+	.heard-trip {
+		font-size: 33px;
+	}
+}
 .trip-total, .trip-movement, .trip-parking, .trip-waiting {
 	float: left;
 }
 .trip-total {
 	padding-right: 26px;
+}
+@media (max-width: 768px) {
+	.trip-total {
+		padding-right: 52px;
+		padding-bottom:  5px;
+	}
 }
 .trip-date {
 	height: 15px;
@@ -291,11 +403,22 @@ body {
 	letter-spacing: 0.6px;
 	color: #323334;
 }
+@media (max-width: 1024px) {		
+	.trip-date {
+		font-size: 12px;
+	}
+}
 .trip-description {
 	padding-top: 10px;
 	font: normal 16px 'Sans-serif';
 	letter-spacing: -0.2px;
 	color: #b6b6b7;
+}
+@media (max-width: 1024px) {		
+	.trip-description {
+		padding-top: 2px;
+		font-size: 14px;
+	}
 }
 .trip-time {
 	padding-top: 0;
@@ -306,115 +429,33 @@ body {
 .trip-movement {
 	padding-right: 6px;
 }
+@media (max-width: 768px) {
+	.trip-movement {
+		padding-right: 0;
+	}
+}
 .trip-parking {
 	text-align: center;
 	padding-right: 12px;
 }
+@media (max-width: 768px) {
+	.trip-parking {
+		clear: left;
+		padding-right: 48px;
+	}
+}
 .trip-total :last-child {
 	font-size: 41px;
 	letter-spacing: 1.5px;
+}
+@media (max-width: 1024px) {		
+	.trip-total :last-child {
+		font-size: 32px;
+	}
 }
 .trip {
 	padding-top: 21px;
 }
 .trip-first {
 	padding-top: 21px;
-}
-@media (max-width: 1024px) {
-	.wrapper-logo-column {
-		width: 50px;
-	}	
-	.logo {
-		margin-left: 10px;
-		padding-bottom: 935px;
-	}	
-	.question {
-		top: inherit;
-		bottom: 20px;
-	}
-	.content {
-		margin-left: 50px;
-	}
-	.working-personal-info span {
-		font-size: 16px;
-		margin-left: 20px;
-	}
-	.working-personal-info span:first-child {
-		margin-left: 10px;
-	}
-	.carshering a img {
-		padding-left: 0;
-	}
-	.search {
-		padding-left: 10px;
-		font-size: 15px;
-	}
-	.search .question-white {
-		padding-right: 10px;
-	}
-	.correct a {
-		font-size: 14px;
-	}
-	.correct a:last-child {
-		padding-left: 0;		
-	}
-	.correct {
-		padding-top: 12px;
-		line-height: 15px;
-		height: 45px;		
-	}
-	.department-item, .designer {
-		padding-left: 12px;
-		padding-right: 12px;
-	}
-	.designer {
-		padding-bottom: 25px;
-	}
-	.department-item {
-		padding-bottom: 13px;
-	}
-	.department-item span, .designer span {
-		font-size: 14px;
-		line-height: 21px;
-	}
-	.department-item .name-department, .designer .name {
-	font-size: 16px;
-	}
-	.position {
-		padding-top: 5px;
-		padding-bottom: 5px;
-		line-height: 20px;
-	}
-	.trips {
-		margin-left: 15px;
-	}
-	.heard-trip {
-		font-size: 33px;
-	}
-	.trip-date {
-		font-size: 12px;
-	}
-	.trip-description {
-		padding-top: 2px;
-		font-size: 14px;
-	}
-	.trip-total :last-child {
-		font-size: 32px;
-	}
-}
-@media (max-width: 768px) {
-	.question {
-		left: 10px;
-	}
-	.trip-total {
-		padding-right: 52px;
-		padding-bottom:  5px;
-	}
-	.trip-movement {
-		padding-right: 0;
-	}
-	.trip-parking {
-		clear: left;
-		padding-right: 48px;
-	}
 }
