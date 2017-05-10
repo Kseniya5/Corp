@@ -201,9 +201,6 @@ body {
 		height: 45px;		
 	}
 }	
-.trips-corrects {
-	padding-top: 65px;
-}
 .correct a:last-child {
 	padding-left: 12px;
 }
@@ -215,20 +212,26 @@ body {
 .department {
 	width: 25%;
 }
-.department, .wrapper-collaborators, .trips-corrects {
+.department, .collaborators, .trips-corrects {
 	position: relative;
 	height: 100%;
 }	
-.wrapper-department {
+.wrapper-department, .wrapper-designers, .wrapper-trips {
 	padding-top: 124px;
 	box-sizing: border-box;
+	height: 100%;
 }
-.wrapper-department ul {
+.wrapper-department ul, .wrapper-designers ul, .wrapper-trips ul {
 	height: 100%;
 	overflow: auto;
 }
-.header-department {
+.header-department, .header-collaborators  {
 	position: absolute;
+	top: 0;
+}
+.trips-corrects .correct {
+	position: absolute;
+	top: 65px;
 }
 .wrapper-department-item {
 	margin-left: 10px;
@@ -303,7 +306,7 @@ body {
 	letter-spacing: 0px;
 }
 .department ul {
-	margin-top: 23px;
+	padding-top: 23px;
 }
 .department span, .collaborators span {
 	display: block;
@@ -314,10 +317,12 @@ body {
 }
 .wrapper-collaborators {
 	width: 27%;
+	height: 100%;
 }
 .collaborators {
 	border-left: 1px solid #f2f2f2;
-	border-right: 1px solid #f2f2f2; 
+	border-right: 1px solid #f2f2f2;
+	height: 100%; 
 }
 .wrapper-designer:first-child {
 	margin-top: 33px;
