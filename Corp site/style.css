@@ -80,6 +80,7 @@ body {
 .content {
 	margin-left: 70px;
 	height: 100%;
+	position: relative;
 }
 @media (max-width: 1024px) {		
 	.content {
@@ -88,6 +89,8 @@ body {
 }	
 .main-content {
 	height: 100%;
+	padding-top: 82px;
+	box-sizing: border-box;
 }
 .salary:after {
 	content: "";
@@ -136,6 +139,8 @@ body {
 	height: 82px;
 	background-color: #f2f6f7;
 	border-bottom: 1px solid #f0f4f5;
+	position: absolute;
+	top: 0;
 }
 @media (max-width: 1024px) {		
 	.working-personal-info span {
@@ -223,6 +228,7 @@ body {
 }
 .wrapper-department ul, .wrapper-designers ul, .wrapper-trips ul {
 	height: 100%;
+	box-sizing: border-box;
 	overflow: auto;
 }
 .header-department, .header-collaborators  {
