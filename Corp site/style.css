@@ -247,7 +247,7 @@ body {
 .line {
 	padding: 0 15px;
 	vertical-align: middle;
-	line-height: 65px;
+	height: 65px;
 	position: absolute;
 	width: 100%;
 	top: 0;
@@ -259,7 +259,7 @@ body {
 	border-radius: 2px;
 	position: absolute;
 	top: 50%;
-	margin-top: -2px;
+	margin-top: -10px;
 	left: 0;
 	box-sizing: border-box;
 }
@@ -274,10 +274,20 @@ body {
 	z-index: 2;
 }
 .expenses {
-	margin: 0 auto;
+	padding-top: 39px;
 	width: 100%;
+	height: 26px;
 	text-align: center;
-
+	font: normal 13px Arial;
+}
+.ruble-small {
+	margin-left: 5px;
+	display: inline-block;
+	height: 10px;
+	width: 7px;
+	background: url(img/ruble-small.png) no-repeat;
+	
+	
 }
 .wrapper-department-item {
 	margin-left: 10px;
