@@ -20,15 +20,35 @@
         	<div class="content">
         		<div class="working-personal-info clearfix">
         			<span class="salary">Затраты за май: 53 352</span>
+        			<div class="dropdown">
+        				<div class="dropdown-content">
+        					<span>1</span>
+        					<span>2</span>
+        					<span>3</span>
+        				</div>
+        			</div>
         			<span class="business-trip">Поездки за май: 345</span>
-        			<span class="carshering"><a class="question-blue" href="#"></a>Классический каршеринг</span>
-        			<div class="correct"><a href='#'>скачать отчет</a></div>
+        			<div class="dropdown">
+        				<div class="dropdown-content">
+        					<span>1</span>
+        					<span>2</span>
+        					<span>3</span>
+        				</div>
+        			</div>
+        			<span class="carshering"><span  class="car-img" href="#"></span>Классический каршеринг</span>
+        			<div class="dropdown">
+        				<div class="dropdown-content">
+        					<span>1</span>
+        					<span>2</span>
+        					<span>3</span>
+        				</div>
+        			</div>
         		</div>
         		<div class="main-content clearfix">
 	        		<div class="department">
 	        			<div class="header-department">
 	        				<div class="search clearfix">Найти отдел<a class="question-white" href="#"></a></div>
-							<div class="correct"><a href="#">+ добавить отдел</a></div>
+							<div class="correct"><a href="#" onclick="show('popup1')" alt>+ добавить отдел</a></div>
 						</div>
 						<div class="wrapper-department">	
 							<ul>
@@ -126,31 +146,99 @@
 						<div class="wrapper-line">
 							<div class="line">
 								<div class="grey-line"></div>
-								<div class="blue-line"></div>
-								<div class="expences">5 000<span class="ruble-small"></span> из 5 000<span class="ruble-small"></span></div>
+								<div class="blue-line new"></div>
+								<div class="expences">2 356<span class="ruble-small"></span> из 5 000<span class="ruble-small"></span></div>
 							</div>
 						</div>	
 	        			<div class="correct"><a href="#">редактировать сотрудника</a><a href="#">удалить</a></div>
 	        			<div class="wrapper-trips">
-	        				<div class="wrapper-no-trips">
-				        		<div class="no-trips">
-				        			<div class="question-big"></div>
-				        			<p>Поездок пока нет</p>
-				        		</div>
-				        		<div class="manager-item">
-				        			<img class="manager-photo" src="img/manager-photo.png">
-				        			<div class="manager-info">Константин
-				        				<br>Константинопольский
-				        				<br>
-				        				<span class="rang">Ваш менеджер</span>
-				        				<br>+7 984 332-12-11
-				        			</div>
-				        		</div>
-			        		</div>
+			        		<ul class="trips">
+								<h3 class="header-trip">Последние поездки</h3>
+								<li class="trip-first clearfix">
+									<div class="trip-total">
+										<div class="trip-date">1 сентября 12:32</div>
+										<div class="trip-description">Всего за поездку</div>
+										<div class="trip-time">2 000 &#8381;</div>
+									</div>
+									<div class="trip-movement">
+										<div class="trip-date">4 часа</div>
+										<div class="trip-description">Движение</div>
+										<div class="trip-time">53 364 &#8381;</div>
+									</div>
+									<div class="trip-parking">
+										<div class="trip-date">1 сентября 17:32</div>
+										<div class="trip-description">Парковки</div>
+										<div class="trip-time">53 364 &#8381;</div>
+									</div>
+									<div class="trip-waiting">
+										<div class="trip-date"></div>
+										<div class="trip-description">Ожидание</div>
+										<div class="trip-time">53 364 &#8381;</div>
+									</div>		
+								</li>
+								<li class="trip clearfix">
+									<div class="trip-total">
+										<div class="trip-date">1 сентября 12:32</div>
+										<div class="trip-description">Всего за поездку</div>
+										<div class="trip-time">2 000 &#8381;</div>
+									</div>
+									<div class="trip-movement">
+										<div class="trip-date">4 часа</div>
+										<div class="trip-description">Движение</div>
+										<div class="trip-time">53 364 &#8381;</div>
+									</div>
+									<div class="trip-parking">
+										<div class="trip-date">1 сентября 17:32</div>
+										<div class="trip-description">Парковки</div>
+										<div class="trip-time">53 364 &#8381;</div>
+									</div>
+									<div class="trip-waiting">
+										<div class="trip-date"></div>
+										<div class="trip-description">Ожидание</div>
+										<div class="trip-time">53 364 &#8381;</div>
+									</div>		
+								</li>
+								<li class="trip clearfix">
+									<div class="trip-total">
+										<div class="trip-date">1 сентября 12:32</div>
+										<div class="trip-description">Всего за поездку</div>
+										<div class="trip-time">2 000 &#8381;</div>
+									</div>
+									<div class="trip-movement">
+										<div class="trip-date">4 часа</div>
+										<div class="trip-description">Движение</div>
+										<div class="trip-time">53 364 &#8381;</div>
+									</div>
+									<div class="trip-parking">
+										<div class="trip-date">1 сентября 17:32</div>
+										<div class="trip-description">Парковки</div>
+										<div class="trip-time">53 364 &#8381;</div>
+									</div>
+									<div class="trip-waiting">
+										<div class="trip-date"></div>
+										<div class="trip-description">Ожидание</div>
+										<div class="trip-time">53 364 &#8381;</div>
+									</div>		
+								</li>				
+							</ul>	
 						</div>	
 					</div>
 				</div>	
         	</div>
+		</div>
+		<div class="popup" id="popup1">
+			<form action="" method="post">
+				<h2>Создание отдела</h2>
+				<label for="NameDepartment">Название отдела</label><input type="text" name="NameDepartment" placeholder="Например, бухгалтерия" required>
+				<label for="textMonthLimit">Месячный лимит</label><input type="text" name="MonthLimit" placeholder="0 &#8381;" required>
+				<label for="time">Доступ к сервису</label>
+				<div class="checkbox">
+					<input type="checkbox" name="time"><label for="time">Будние дни</label>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" name="time"><label for="time">Выходные дни</label>	
+				</div>
+			</form>
 		</div>
     </body>
 </html>
