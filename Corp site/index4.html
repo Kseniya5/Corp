@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Org</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="wrapper clearfix">
+        	<div class="wrapper-logo-column">
+		    	<div class="logo-column">
+		    		<div class="logo"></div>
+		    		<a href="#" class="question"></a>
+		    	</div>
+        	</div>
+        	<div class="content">
+        		<div class="working-personal-info clearfix">
+        			<span class="salary">Затраты за май: 0 &#8381;</span>
+        			<span class="business-trip correction-business-trip">Поездки за май: 0</span>
+        			<span class="carshering correction-carshering"><a class="question-blue" href="#"></a>Классический каршеринг</span>
+        			<div class="correct"><a href='#'>скачать отчет</a></div>
+        		</div>
+        		<div class="main-content clearfix">
+        			<div class="wrapper-no-trips no-trips-background">
+		        		<div class="no-trips">
+		        			<div class="plus-image"></div>
+		        			<p class="no-trip">Ничего не добавлено</p>
+		        			<p class="discription-add-department">Добавьте отдел, чтобы <br>начать работать</p>
+		        			<div class="correct"><a href="#" onclick="show('popup1')" alt>+добавить отдел</a></div>
+		        		</div>		
+		         		<div class="manager-item">
+		        			<img class="manager-photo" src="img/manager-photo.png">
+		        			<div class="manager-info">Константин
+		        				<br>Константинопольский
+		        				<br>
+		        				<span class="rang">Ваш менеджер</span>
+		        				<br>+7 984 332-12-11
+		        			</div>
+		        		</div>
+		        	</div>		
+				</div>	
+        	</div>
+        	<div class="popup" id="popup1">
+				<form action="" method="post">
+					<h2>Создание отдела</h2>
+					<label for="NameDepartment">Название отдела</label><input type="text" name="NameDepartment" placeholder="Например, бухгалтерия" required>
+					<label for="textMonthLimit">Месячный лимит</label><input type="text" name="MonthLimit" placeholder="0 &#8381;" required>
+					<label>Доступ к сервису</label>
+					<div class="checkbox clearfix">
+						<label class="checkbox-item"><input type="checkbox"><span>Будние дни</span></label>
+						<div class="myTime">	
+							<input type="text" id="myTime" placeholder="08:00">
+							<span class="time"></span>
+							<input type="text" id="myTime" placeholder="23:00">
+						</div>	
+					</div>
+					<div class="checkbox clearfix">
+						<label class="checkbox-item"><input type="checkbox"><span>Выходные дни</span></label>
+						<div class="myTime">	
+							<input type="text" id="myTime" placeholder="08:00">
+							<span class="time"></span>
+							<input type="text" id="myTime" placeholder="23:00">
+						</div>	
+					</div>
+					<button class="cancel" type="submit">отменить</button>
+					<button class="creat" type="submit">создать</button>
+				</form>
+			</div>
+		</div>
+    </body>
+</html>

@@ -19,7 +19,7 @@
         	</div>
         	<div class="content">
         		<div class="working-personal-info clearfix">
-        			<span class="salary">Затраты за май: 53 352</span>
+        			<span class="salary">Затраты за май: 53 352 &#8381;</span>
         			<div class="dropdown">
         				<div class="dropdown-content">
         					<span>1</span>
@@ -53,11 +53,11 @@
 						<div class="wrapper-department">	
 							<ul>
 								<li class="wrapper-department-item active">
-									<div class="department-item total">
+									<div class="department-item">
 				        				<a href="#">
 				        					<h4 class="name-item">Все сотрудники</h4>
 				        					<span class="quantity">Всего 415 человек</span>
-				        					<div class="correct">редактировать</div>
+				        					<div class="correct" onclick="show('popup2')">редактировать</div>
 				        				</a>
 			        				</div>
 								</li>
@@ -68,6 +68,7 @@
 				        					<span class="quantity">Всего 35 человек</span>
 				        					<span class="working-working-days">Будние дни с 15:00 до 20:00</span>
 				        					<span class="working-week-end">Выходные с 23:00 до 01:00</span>
+				        					<div class="correct" onclick="show('popup2')">редактировать</div>
 				        				</a>
 			        				</div>
 			        			</li>
@@ -77,6 +78,7 @@
 				        					<h4 class="name-item">Топ-менеджеры</h4>
 				        					<span class="quantity">Всего 2 человека</span>
 				        					<span class="working-working-days">Без ограничений</span>
+				        					<div class="correct" onclick="show('popup2')">редактировать</div>
 				        				</a>
 				        			</div>			
 			        			</li>
@@ -86,6 +88,7 @@
 					        				<h4 class="name-item">Топ-менеджеры</h4>
 				        					<span class="quantity">Всего 2 человека</span>
 				        					<span class="working-working-days">Без ограничений</span>
+				        					<div class="correct" onclick="show('popup2')">редактировать</div>
 					        			</a>
 					        		</div>			
 				        		</li>
@@ -96,7 +99,7 @@
 						<div class="collaborators">
 							<div class="header-collaborators">	
 								<div class="search clearfix">Найти сотрудника<a class="question-white" href="#"></a></div>
-								<div class="correct"><a href="#">+ добавить сотрудника</a></div>
+								<div class="correct"><a href="#" onclick="show('popup3')">+ добавить сотрудника</a></div>
 							</div>
 							<div class="wrapper-designers">	
 								<ul class="designers">
@@ -147,14 +150,14 @@
 							<div class="line">
 								<div class="grey-line"></div>
 								<div class="blue-line new"></div>
-								<div class="expences">2 356<span class="ruble-small"></span> из 5 000<span class="ruble-small"></span></div>
+								<div class="expences">2 356 &#8381; из 5 000 &#8381;</div>
 							</div>
 						</div>	
-	        			<div class="correct"><a href="#">редактировать сотрудника</a><a href="#">удалить</a></div>
+	        			<div class="correct"><a href="#" onclick="show('popup4')">редактировать сотрудника</a><a href="#">удалить</a></div>
 	        			<div class="wrapper-trips">
 			        		<ul class="trips">
 								<h3 class="header-trip">Последние поездки</h3>
-								<li class="trip-first clearfix">
+								<li class="trip-first">
 									<div class="trip-total">
 										<div class="trip-date">1 сентября 12:32</div>
 										<div class="trip-description">Всего за поездку</div>
@@ -176,7 +179,7 @@
 										<div class="trip-time">53 364 &#8381;</div>
 									</div>		
 								</li>
-								<li class="trip clearfix">
+								<li class="trip">
 									<div class="trip-total">
 										<div class="trip-date">1 сентября 12:32</div>
 										<div class="trip-description">Всего за поездку</div>
@@ -198,7 +201,7 @@
 										<div class="trip-time">53 364 &#8381;</div>
 									</div>		
 								</li>
-								<li class="trip clearfix">
+								<li class="trip">
 									<div class="trip-total">
 										<div class="trip-date">1 сентября 12:32</div>
 										<div class="trip-description">Всего за поездку</div>
@@ -226,19 +229,81 @@
 				</div>	
         	</div>
 		</div>
-		<div class="popup" id="popup1">
-			<form action="" method="post">
-				<h2>Создание отдела</h2>
-				<label for="NameDepartment">Название отдела</label><input type="text" name="NameDepartment" placeholder="Например, бухгалтерия" required>
-				<label for="textMonthLimit">Месячный лимит</label><input type="text" name="MonthLimit" placeholder="0 &#8381;" required>
-				<label for="time">Доступ к сервису</label>
-				<div class="checkbox">
-					<input type="checkbox" name="time"><label for="time">Будние дни</label>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" name="time"><label for="time">Выходные дни</label>	
-				</div>
-			</form>
-		</div>
+		<div class="popup-wrapper">
+			<div class="popup" id="popup1">
+				<form action="" method="post">
+					<h2>Создание отдела</h2>
+					<label for="NameDepartment">Название отдела</label><input type="text" name="NameDepartment" placeholder="Например, бухгалтерия" required>
+					<label for="textMonthLimit">Месячный лимит</label><input type="text" name="MonthLimit" placeholder="0 &#8381;" required>
+					<label>Доступ к сервису</label>
+					<div class="checkbox clearfix">
+						<label class="checkbox-item"><input type="checkbox"><span>Будние дни</span></label>
+						<div class="myTime">	
+							<input type="text" id="myTime" placeholder="08:00">
+							<span class="time"></span>
+							<input type="text" id="myTime" placeholder="23:00">
+						</div>	
+					</div>
+					<div class="checkbox clearfix">
+						<label class="checkbox-item"><input type="checkbox"><span>Выходные дни</span></label>
+						<div class="myTime">	
+							<input type="text" id="myTime" placeholder="08:00">
+							<span class="time"></span>
+							<input type="text" id="myTime" placeholder="23:00">
+						</div>	
+					</div>
+					<button class="cancel" type="submit">отменить</button>
+					<button class="creat" type="submit">создать</button>
+				</form>
+			</div>
+			<div class="popup" id="popup2">
+				<form action="" method="post">
+					<h2>Редактирование отдела</h2>
+					<label for="NameDepartment">Название отдела</label><input type="text" name="NameDepartment" value="Менеджеры" placeholder="Например, бухгалтерия" required>
+					<label for="textMonthLimit">Месячный лимит</label><input type="text" name="MonthLimit" value="5 000 &#8381;" placeholder="0 &#8381;" required>
+					<label>Доступ к сервису</label>
+					<div class="checkbox clearfix">
+						<label class="checkbox-item"><input type="checkbox" checked><span>Будние дни</span></label>
+						<div class="myTime">	
+							<input type="text" id="myTime" placeholder="08:00" value="08:00">
+							<span class="time"></span>
+							<input type="text" id="myTime" placeholder="23:00" value="23:00">
+						</div>	
+					</div>
+					<div class="checkbox clearfix">
+						<label class="checkbox-item"><input type="checkbox"><span>Выходные дни</span></label>
+						<div class="myTime">	
+							<input type="text" id="myTime" placeholder="08:00">
+							<span class="time"></span>
+							<input type="text" id="myTime" placeholder="23:00">
+						</div>	
+					</div>
+					<button class="cancel" type="submit">отменить</button>
+					<button class="delite" type="submit">удалить</button>
+					<button class="save" type="submit">сохранить</button>
+				</form>
+			</div>
+			<div class="popup" id="popup3">
+				<form action="" method="post">
+					<h2>Добавление сотрудника</h2>
+					<label for="NameCollaborator">Имя сотрудника</label><input type="text" name="NameCollaborator" placeholder="Иван" required>
+					<label for="NumberTelephone">Номер телефона</label><input type="text" name="NumberTelephone" placeholder="+7 000 000-00-00" required>
+					<label for="NameDepartment">Отдел</label><input type="text" id="placeholder-department" name="NameDepartment" placeholder="Не важно">
+					<button class="cancel" type="submit">отменить</button>
+					<button class="creat" type="submit">создать</button>
+				</form>
+			</div>
+			<div class="popup" id="popup4">
+				<form action="" method="post">
+					<h2>Сотрудник</h2>
+					<label for="NameCollaborator">Имя сотрудника</label><input type="text" name="NameCollaborator" placeholder="Иван" value="Иван" required>
+					<label for="NumberTelephone">Номер телефона</label><input type="text" name="NumberTelephone" placeholder="+7 000 000-00-00" value="+7 984 241-21-12" required>
+					<label for="NameDepartment">Отдел</label><input type="text" id="placeholder-department" name="NameDepartment" placeholder="Не важно" value="Администрация">
+					<button class="cancel" type="submit">отменить</button>
+					<button class="delite" type="submit">удалить</button>
+					<button class="save" type="submit">сохранить</button>
+				</form>
+			</div>
+		</div>	
     </body>
 </html>

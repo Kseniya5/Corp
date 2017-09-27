@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Org</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="wrapper clearfix">
+        	<div class="wrapper-logo-column">
+		    	<div class="logo-column">
+		    		<div class="logo"></div>
+		    		<a href="#" class="question"></a>
+		    	</div>
+        	</div>
+        	<div class="content">
+        		<div class="working-personal-info clearfix">
+        			<span class="salary">Затраты за май: 53 352 &#8381;</span>
+        			<span class="business-trip">Поездки за май: 345</span>
+        			<span class="carshering"><a class="question-blue" href="#"></a>Классический каршеринг</span>
+        			<div class="correct"><a href='#'>скачать отчет</a></div>
+        		</div>
+        		<div class="main-content clearfix">
+	        		<div class="department department-shadow">
+	        			<div class="header-department">
+	        				<div class="search clearfix">Найти отдел<a class="question-white" href="#"></a></div>
+							<div class="correct"><a href="#" onclick="show('popup1')">+добавить отдел</a></div>
+						</div>
+						<div class="wrapper-department">	
+							<ul>
+								<li class="wrapper-department-item">
+									<div class="department-item">
+				        				<a href="#">
+				        					<h4 class="name-item">Все сотрудники</h4>
+				        					<span class="quantity">Никого нет</span>
+				        					<div class="correct">редактировать</div>
+				        				</a>
+			        				</div>
+								</li>
+								<li class="wrapper-department-item">
+									<div class="department-item">
+				        				<a href="#">
+				        					<h4 class="name-item">Отдел дизайна</h4>
+				        					<span class="quantity">Никого нет</span>
+				        					<span class="working-working-days">Будние дни с 15:00 до 20:00</span>
+				        					<span class="working-week-end">Выходные с 23:00 до 01:00</span>
+				        					<div class="correct">редактировать</div>
+				        				</a>
+			        				</div>
+			        			</li>
+			        			<li class="wrapper-department-item">
+									<div class="department-item">
+										<a href="#">
+				        					<h4 class="name-item">Топ-менеджеры</h4>
+				        					<span class="quantity">Никого нет</span>
+				        					<span class="working-working-days">Без ограничений</span>
+				        					<div class="correct">редактировать</div>
+				        				</a>
+				        			</div>			
+			        			</li>
+			        			<li class="wrapper-department-item">
+					        		<div class="department-item">
+					        			<a href="#">
+					        				<h4 class="name-item">Топ-менеджеры</h4>
+				        					<span class="quantity">Никого нет</span>
+				        					<span class="working-working-days">Без ограничений</span>
+				        					<div class="correct">редактировать</div>
+					        			</a>
+					        		</div>			
+				        		</li>
+			        		</ul>
+			        	</div>	
+					</div>
+					<div class="wrapper-no-trips no-trips-background">
+	        		<div class="no-trips">
+	        			<div class="plus-image"></div>
+	        			<p class="no-trip">Добавьте сотрудников</p>
+	        			<p class="discription-add-department">Добавьте сотрудников, <br>чтобы начать работать<br>с сервисом</p>
+	        			<div class="correct"><a href="#" onclick="show('popup3')" alt>+добавить сотрудника</a></div>
+	        		</div>		
+	         		<div class="manager-item">
+	        			<img class="manager-photo" src="img/manager-photo.png">
+	        			<div class="manager-info">Константин
+	        				<br>Константинопольский
+	        				<br>
+	        				<span class="rang">Ваш менеджер</span>
+	        				<br>+7 984 332-12-11
+	        			</div>
+	        		</div>	
+				</div>	
+        	</div>
+		</div>
+		<div class="popup-wrapper">
+			<div class="popup" id="popup1">
+				<form action="" method="post">
+					<h2>Создание отдела</h2>
+					<label for="NameDepartment">Название отдела</label><input type="text" name="NameDepartment" placeholder="Например, бухгалтерия" required>
+					<label for="textMonthLimit">Месячный лимит</label><input type="text" name="MonthLimit" placeholder="0 &#8381;" required>
+					<label>Доступ к сервису</label>
+					<div class="checkbox clearfix">
+						<label class="checkbox-item"><input type="checkbox"><span>Будние дни</span></label>
+						<div class="myTime">	
+							<input type="text" id="myTime" placeholder="08:00">
+							<span class="time"></span>
+							<input type="text" id="myTime" placeholder="23:00">
+						</div>	
+					</div>
+					<div class="checkbox clearfix">
+						<label class="checkbox-item"><input type="checkbox"><span>Выходные дни</span></label>
+						<div class="myTime">	
+							<input type="text" id="myTime" placeholder="08:00">
+							<span class="time"></span>
+							<input type="text" id="myTime" placeholder="23:00">
+						</div>	
+					</div>
+					<button class="cancel" type="submit">отменить</button>
+					<button class="creat" type="submit">создать</button>
+				</form>
+			</div>
+			<div class="popup" id="popup3">
+				<form action="" method="post">
+					<h2>Добавление сотрудника</h2>
+					<label for="NameCollaborator">Имя сотрудника</label><input type="text" name="NameCollaborator" placeholder="Иван" required>
+					<label for="NumberTelephone">Номер телефона</label><input type="text" name="NumberTelephone" placeholder="+7 000 000-00-00" required>
+					<label for="NameDepartment">Отдел</label><input type="text" id="placeholder-department" name="NameDepartment" placeholder="Не важно">
+					<button class="cancel" type="submit">отменить</button>
+					<button class="creat" type="submit">создать</button>
+				</form>
+			</div>
+		</div>	
+    </body>
+</html>
