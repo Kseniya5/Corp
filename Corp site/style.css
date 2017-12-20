@@ -9,9 +9,9 @@ li {
 	list-style: none;
 }
 .clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 .clear {
 	clear: both;
@@ -45,7 +45,7 @@ body {
 }
 .wrapper-logo-column:after {
     box-shadow: 4px 0px 4px 0px rgba(240,240,240,0.9);
-    content: " ";
+    content: "";
     height: 100%;
     position: absolute;
     right: 0;
@@ -208,31 +208,31 @@ body {
 .business-trip.correction-business-trip {
 	margin-left: 90px;
 }
-.search {
+.search input {
 	padding-left: 13px;
+	height: 65px;
+	width: 100%;
+	display: inline-block;
 	vertical-align: middle;
 	font: normal 16px Arial;
 	color: #cccccc;
 	line-height: 65px;
+	border: none;
+	outline: none;
+	background: url(img/question-white.png) no-repeat 19px 19px;
+	background-position: right 50px center;
 }
 @media (max-width: 1024px) {		
-	.search {
+	.search input {
 		padding-left: 10px;
 		font-size: 15px;
-	}
-}	
-.search .question-white {
-	margin-top: 24px; 
-	padding-right: 26px;
-	float: right;
-	width: 19px;
-	height: 19px;
-	background: url(img/question-white.png) no-repeat;
+		background-position: right 20px center;
+	}	
 }
-@media (max-width: 1024px) {		
-	.search .question-white {
-		padding-right: 10px;
-	}
+@media (max-width: 768px) {		
+	.search input {
+		background-position: right 10px center;
+	}	
 }	
 .correct a {
 	font: normal 16px Arial;
@@ -352,7 +352,7 @@ label {
 	font: normal 11px Arial;
 	color: #4d4d4d;
 }
-input {
+.popup input {
 	padding-left: 5px;
 	margin-bottom: 15px;
 	width: 98%;
@@ -370,10 +370,10 @@ input {
 	-moz-box-shadow: 0px 2px 3px -1px rgba(197,197,197,1);
 	box-shadow: 0px 2px 3px -1px rgba(197,197,197,1);
 }
-input[type="text"]::-webkit-input-placeholder {
+.popup input[type="text"]::-webkit-input-placeholder {
 	color: #cecece;
 }
-input[type="text"]::-moz-placeholder {
+.popup input[type="text"]::-moz-placeholder {
     color: #cecece;
 }
 #placeholder-department::-webkit-input-placeholder {
@@ -461,20 +461,21 @@ button {
 	box-sizing: border-box;
 	overflow: auto;
 }
-.header-department, .header-collaborators  {
+.wrapper-department ul li, .wrapper-designers ul li {
+	cursor: pointer;
+}
+.header-department, .header-collaborators, .header-trips {
 	position: absolute;
 	top: 0;
 	width: 100%;
 }
 .trips-corrects .correct {
-	position: absolute;
-	top: 65px;
-	width: 100%;
 	height: 58px;
 	box-sizing: border-box;
 }
 .wrapper-line {
 	margin: 0 15px;	
+	height: 65px;
 	position: relative;
 }
 .line {
@@ -482,8 +483,6 @@ button {
 	height: 65px;
 	position: absolute;
 	width: 100%;
-	top: 0;
-	box-sizing: border-box;
 }
 .grey-line, .blue-line {
 	height: 4px;
@@ -583,7 +582,7 @@ button {
 }
 @media (max-width: 1024px) {		
 	.name-item {
-	font-size: 16px;
+		font-size: 16px;
 	}
 }	
 .department-item .name-item {
@@ -594,7 +593,7 @@ button {
 	color: #929292;	
 }
 .active .quantity, .active .working-working-days, .active .working-week-end, .active .position, .active .phone {
- color: #727272;
+	color: #727272;
 }
 
 .quantity, .working-working-days, .working-week-end {
@@ -697,6 +696,19 @@ button {
 .trip-total, .trip-movement, .trip-parking, .trip-waiting {
 	display: inline-block;
 	vertical-align: top;
+}
+.trip-waiting .trip-description {
+	padding-top: 25px;
+}
+@media (max-width: 1024px) { 
+	.trip-waiting .trip-description {
+	padding-top: 18px;
+	}
+}
+@media (max-width: 768px) { 
+	.trip-waiting .trip-description {
+	padding-top: 17px;
+	}
 }
 .trip-total {
 	padding-right: 26px;
@@ -850,7 +862,6 @@ button {
 	line-height: 100%;
 	vertical-align: middle;
 	text-align: center;
-	position: relative;
 }
 .wrapper-no-trips:before {
 	content: '';
@@ -866,6 +877,9 @@ button {
 	display: inline-block;
 	vertical-align: middle;
 }
+body {
+	position: relative;
+}
 .manager-item {
 	width: 265px;
 	position: absolute;
@@ -877,7 +891,7 @@ button {
 	color: #d3d3d3; 
 	border-top-left-radius: 6px;
 }
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
 	.manager-item {
 	width: 240px;
 	font-size: 10px;

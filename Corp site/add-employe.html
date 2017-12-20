@@ -27,49 +27,43 @@
         		<div class="main-content clearfix">
 	        		<div class="department department-shadow">
 	        			<div class="header-department">
-	        				<div class="search clearfix">Найти отдел<a class="question-white" href="#"></a></div>
+	        				<form class="search">
+	        					<input type="text" name="" placeholder="Найти отдел">
+	        				</form>
 							<div class="correct"><a href="#" onclick="show('popup1')">+добавить отдел</a></div>
 						</div>
 						<div class="wrapper-department">	
 							<ul>
 								<li class="wrapper-department-item">
 									<div class="department-item">
-				        				<a href="#">
-				        					<h4 class="name-item">Все сотрудники</h4>
-				        					<span class="quantity">Никого нет</span>
-				        					<div class="correct">редактировать</div>
-				        				</a>
+			        					<h4 class="name-item">Все сотрудники</h4>
+			        					<span class="quantity">Никого нет</span>
+			        					<div class="correct">редактировать</div>
 			        				</div>
 								</li>
 								<li class="wrapper-department-item">
 									<div class="department-item">
-				        				<a href="#">
-				        					<h4 class="name-item">Отдел дизайна</h4>
-				        					<span class="quantity">Никого нет</span>
-				        					<span class="working-working-days">Будние дни с 15:00 до 20:00</span>
-				        					<span class="working-week-end">Выходные с 23:00 до 01:00</span>
-				        					<div class="correct">редактировать</div>
-				        				</a>
+			        					<h4 class="name-item">Отдел дизайна</h4>
+			        					<span class="quantity">Никого нет</span>
+			        					<span class="working-working-days">Будние дни с 15:00 до 20:00</span>
+			        					<span class="working-week-end">Выходные с 23:00 до 01:00</span>
+			        					<div class="correct">редактировать</div>
 			        				</div>
 			        			</li>
 			        			<li class="wrapper-department-item">
 									<div class="department-item">
-										<a href="#">
-				        					<h4 class="name-item">Топ-менеджеры</h4>
-				        					<span class="quantity">Никого нет</span>
-				        					<span class="working-working-days">Без ограничений</span>
-				        					<div class="correct">редактировать</div>
-				        				</a>
+			        					<h4 class="name-item">Топ-менеджеры</h4>
+			        					<span class="quantity">Никого нет</span>
+			        					<span class="working-working-days">Без ограничений</span>
+			        					<div class="correct">редактировать</div>
 				        			</div>			
 			        			</li>
 			        			<li class="wrapper-department-item">
 					        		<div class="department-item">
-					        			<a href="#">
-					        				<h4 class="name-item">Топ-менеджеры</h4>
-				        					<span class="quantity">Никого нет</span>
-				        					<span class="working-working-days">Без ограничений</span>
-				        					<div class="correct">редактировать</div>
-					        			</a>
+				        				<h4 class="name-item">Топ-менеджеры</h4>
+			        					<span class="quantity">Никого нет</span>
+			        					<span class="working-working-days">Без ограничений</span>
+			        					<div class="correct">редактировать</div>
 					        		</div>			
 				        		</li>
 			        		</ul>
@@ -81,16 +75,7 @@
 	        			<p class="no-trip">Добавьте сотрудников</p>
 	        			<p class="discription-add-department">Добавьте сотрудников, <br>чтобы начать работать<br>с сервисом</p>
 	        			<div class="correct"><a href="#" onclick="show('popup3')" alt>+добавить сотрудника</a></div>
-	        		</div>		
-	         		<div class="manager-item">
-	        			<img class="manager-photo" src="img/manager-photo.png">
-	        			<div class="manager-info">Константин
-	        				<br>Константинопольский
-	        				<br>
-	        				<span class="rang">Ваш менеджер</span>
-	        				<br>+7 984 332-12-11
-	        			</div>
-	        		</div>	
+	        		</div>			
 				</div>	
         	</div>
 		</div>
@@ -117,7 +102,7 @@
 							<input type="text" id="myTime" placeholder="23:00">
 						</div>	
 					</div>
-					<button class="cancel" type="submit">отменить</button>
+					<button class="cancel">отменить</button>
 					<button class="creat" type="submit">создать</button>
 				</form>
 			</div>
@@ -127,10 +112,19 @@
 					<label for="NameCollaborator">Имя сотрудника</label><input type="text" name="NameCollaborator" placeholder="Иван" required>
 					<label for="NumberTelephone">Номер телефона</label><input type="text" name="NumberTelephone" placeholder="+7 000 000-00-00" required>
 					<label for="NameDepartment">Отдел</label><input type="text" id="placeholder-department" name="NameDepartment" placeholder="Не важно">
-					<button class="cancel" type="submit">отменить</button>
+					<button class="cancel">отменить</button>
 					<button class="creat" type="submit">создать</button>
 				</form>
 			</div>
-		</div>	
+		</div>
+		<div class="manager-item">
+			<img class="manager-photo" src="img/manager-photo.png">
+			<div class="manager-info">Константин
+				<br>Константинопольский
+				<br>
+				<span class="rang">Ваш менеджер</span>
+				<br>+7 984 332-12-11
+			</div>
+		</div>
     </body>
 </html>
